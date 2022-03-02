@@ -1,8 +1,6 @@
 package sk.stuba.fei.uim.oop.board;
 
-import sk.stuba.fei.uim.oop.cards.Aim;
-import sk.stuba.fei.uim.oop.cards.Card;
-import sk.stuba.fei.uim.oop.cards.Shooting;
+import sk.stuba.fei.uim.oop.cards.*;
 import sk.stuba.fei.uim.oop.player.Player;
 import sk.stuba.fei.uim.oop.tiles.Duck;
 import sk.stuba.fei.uim.oop.tiles.Tile;
@@ -43,10 +41,23 @@ public class Board {
         }
 
         this.actionCards = new ArrayList<>();
-        for (int i = 0; i < 15; i++) {
-            actionCards.add(new Aim(this));
+        for (int i = 0; i < 12; i++) {
             actionCards.add(new Shooting(this));
         }
+        for (int i = 0; i < 10; i++) {
+            actionCards.add(new Aim(this));
+        }
+        for (int i = 0; i < 6; i++) {
+            actionCards.add(new DuckMarch(this));
+        }
+        actionCards.add(new CrazyBill(this));
+        actionCards.add(new CrazyBill(this));
+        actionCards.add(new DuckDance(this));
+        actionCards.add(new TurboDuck(this));
+        actionCards.add(new WaterWhirlpool(this));
+        actionCards.add(new WaterWhirlpool(this));
+
+
         Collections.shuffle(this.actionCards);
         for (Player player : players) {
             Card[] newCards = new Card[3];
@@ -104,8 +115,8 @@ public class Board {
 
     public void moveDuck(int index) {
         Tile temp = this.pond[index];
-        for (int i = 0; i < index; i++) {
-            this.pond[i + 1] = this.pond[i];
+        for (int i = index; i > 0; i--) {
+            this.pond[i] = this.pond[i - 1];
         }
         this.pond[0] = temp;
     }
@@ -117,14 +128,14 @@ public class Board {
     }
 
     public void shuffleAllCards() {
-        List<Tile> pondList = Arrays.asList(this.pond);
-        pondList.addAll(this.deck);
-        Collections.shuffle(pondList);
+        List<Tile> list = new ArrayList<>(this.deck);
+        list.addAll(Arrays.asList(this.pond));
+        Collections.shuffle(list);
 
         for (int i = 0; i < 6; i++) {
-            this.pond[i] = pondList.remove(pondList.size() - 1);
+            this.pond[i] = list.remove(list.size() - 1);
         }
-        this.deck = new ArrayList<>(pondList);
+        this.deck = new ArrayList<>(list);
     }
 
     public void setAimTile(int index, boolean value) {

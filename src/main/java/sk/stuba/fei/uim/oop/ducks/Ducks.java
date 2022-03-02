@@ -62,13 +62,15 @@ public class Ducks {
         System.out.println("--- There are no playable cards on your hand! Which card do you want to throw away? ---");
         ArrayList<Card> cards = activePlayer.getAllCards();
         int numberCard = choosingCard(cards, "REMOVE");
-        cards.get(numberCard - 1).removeCard(activePlayer);
+        cards.get(numberCard).removeCard(activePlayer);
     }
 
     private void playCard(ArrayList<Card> playableCards, Player activePlayer) {
         System.out.println("--- Playable cards on hand ---");
         int numberCard = choosingCard(playableCards, "PLAY");
-        playableCards.get(numberCard - 1).playCard(activePlayer);
+        playableCards.get(numberCard).playCard(activePlayer);
+        this.board.addActionCard(playableCards.get(numberCard));
+        activePlayer.removeAndTakeNewCard(playableCards.get(numberCard), this.board.getActionCard());
     }
 
     private int choosingCard(ArrayList<Card> cards, String verb) {
@@ -76,10 +78,12 @@ public class Ducks {
             System.out.println("Card " + (i+1) + ":" + cards.get(i).getName());
         }
         int numberCard = 0;
-        while (numberCard < 1 || numberCard > cards.size() + 1) {
-            numberCard = ZKlavesnice.readInt("*** Enter number of card you want to " + verb + ": ***");
-            if (numberCard < 1 || numberCard > cards.size() + 1) {
+        while (true) {
+            numberCard = ZKlavesnice.readInt("*** Enter number of card you want to " + verb + ": ***") - 1;
+            if (numberCard < 0 || numberCard > cards.size() - 1) {
                 System.out.println(" !!! You enter wrong number of card. Try Again! !!! ");
+            } else {
+                break;
             }
         }
         return numberCard;

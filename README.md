@@ -13,7 +13,7 @@ Chránťe svoje vlastné kačky a zlikvidujte všetky kačky vašich súperov. V
 * 5 Kariet kačka pre každého hráča
 * 5 Kariet vody
 * 6 Kariet zameriavačov
-* XX Akčných kariet
+* 34 Akčných kariet
 
 ## Príprava hry
 Hru môže hrať 2-6 hráčov. Každý hráč dostane 5 kariet kačiek. Karty kačiek všetkých hráčov sa zamiešajú spolu s kartami vody a tento balíček si odložíme a budeme používať na vykladanie do Rybníka (Hracie pole o veľkosti 6).
@@ -46,26 +46,26 @@ Vyhráva hráč, ktorému ako jedinému prežily kačky (zjednodušenie je, že 
 
 ## Prehľad akčných kariet
 ### Zamierenie a streľba
-#### Zamieriť
+#### Zamieriť - 10 kariet
 Zahraním karty zamieriť si zvolíme, nad ktoré políčko v rybníku zamierime. Túto kartu vieme zahrať iba na políčko, nad ktorým ešte zameriavač nie je. Zamierime iba nad toto dané mieto v rybníku, nie na konkrétnu kačku. To znamená, že ak sa kačka z tohto miesta pohla, zameriavač stále ostáva na mieste, a zamierené bude na inú kačku alebo na kartu vody. Môžeme zamieriť aj na miesto, kde sa nachádza v rybníku voda.
 
-#### Vystreliť
+#### Vystreliť - 12 kariet
 Zahraním karty vystreliť vieme streliť na zamierené políčko. Nie je podstatné , ktorý hráč zamieril na dané políčko. Hociktorú kačku, ktorá sa nachádza na zamierenom políčku môže zasteliť hociktorý hráč. Zastrelená kačka je odstránená z hry. Všetky karty, ktoré sa nachádzajú za touto kačkou posunte o jedno pole dopredu, a na koniec doplne kartu z balíčka. Po vystrelení odstránte zameriavač. Kartu vystreliť ide zahrať aj keď je zamierené políčko s vodou. V tom prípade však karta vody ostáva na svojom mieste a odstránime iba zameriavač.
 
-#### Divoký Bill
+#### Divoký Bill - 2 karty
 Funguje ako kombinácia kariet Zamieriť a Vystreliť. Odstráňte z rybníka ľubovoľnú kačku. Pokiaľ nad daným políčkom bol zameriavač, vráťte ho do kôpky. Kačice v rybníku sa musia posunúť aby zaplnili dieru, tak ako v prípade karty vystreliť.
 
 ### Pohyb Kačiek
-#### Kačací pochod
+#### Kačací pochod - 6 kariet
 Posuňte všetky karty v rade o jedno políčko dopredu. Prvú kartu vráťte späť na koniec balíčka s kačicami, a voľné pole na konci rybníka doplňte kartou z vrchu balíčka s kačicami.
 
-#### Turbokačka
+#### Turbokačka - 1 karta
 Posuňte ľubovoľnú kačku na políčko najviac v predu rybníka. Kačky, ktoré predbehla, posuňte o jedno miesto dozadu.
 
-#### Rošambo
+#### Rošambo - 2 karty
 Náhodne premiešajte pozície všetkých kariet v rybníku. Zameriavače ostávajú na svojich miestach (spravte shuffle na kartách v rybníku)
 
-#### Kačací tanec
+#### Kačací tanec - 1 karta
 Zoberte karty z rybníka a zamiešajte ich s balíčkom s kačicami. Potom vyložte nových 6 kariet do rybníka.
 
 ## Hodnotenie
@@ -106,13 +106,15 @@ Prípadne sú pri nedostatočnej implementácií struhnuté body za OOP za nedos
 
 ## Odovzdávanie
 Zadanie si naklonujte z repozitára zadania výhradne pomocou poskytnutej linky cez GitHub Classroom (pokiaľ si vygenerujete vlastný repozitár pomocou tlačidla "Use this template" z template repozitára, my váš repozitár neuvidíme a nebudeme ho hodnotiť!). Svoje vypracovanie nahrajte do pre vás vytvoreného repozitára pre toto zadanie pomocou programu Git (git commit + git push).
-Skontrolujte si, či sa váš repozitár nachádza pod skupinov **Interes-Group**, inak nemáme prístup ku vášmu repozitáru a zadanie sa nepovažuje za odovzdané. Vypracovanie môžete "pusho-vať" priebežne. Hodnotiť sa bude iba _master_ branch. Zadanie je nutné vypracovať do **24.3.2022 23:00**.
+Skontrolujte si, či sa váš repozitár nachádza pod skupinov **Interes-Group**, inak nemáme prístup ku vášmu repozitáru a zadanie sa nepovažuje za odovzdané. Vypracovanie môžete "pusho-vať" priebežne. Hodnotiť sa bude iba _master_ branch. Zadanie je nutné vypracovať do **25.3.2022 23:00**.
 
 V projekte upravujte iba súbory v priečinku _src/main_ a jeho podpriečinkoch. Ostatné súbory je upravovať zakázané (predovšetkým súbory _pom.xml_, súbory obsahujúce github pipeline-y a súbory obsahujúce automatizované testy).
 
 Vo svojom github účte si nastavte svoje meno alebo AIS login (settings > profile > name), aby bolo možné priradiť riešenie ku študentovy. **Pokiaľ nebude možné spárovať študenta s riešením je zadanie hodnotené 0 bodmi!**
 
-
+## Zdroje (pre lepšie pochopenie zadania)
+ * [Pravidlá pôvodnej hry](https://hrajeme.cz/wp-content/uploads/Files/Strelenekachny.pdf)
+ * [Krátke video o pôvodnej hry](https://www.youtube.com/watch?v=6pQn0A1S6Eg)
 
 # Assignment 1 - Duck hunt
 B-OOP 2022
@@ -129,7 +131,7 @@ Protect your own ducks and try to kill the ducks of the other players. The playe
 * 5 Ducks for each player
 * 5 Empty water cards
 * 6 Crosshair cards
-* XX Action cards
+* 34 Action cards
 
 ## Before the game starts
 The game is played by 2-6 players. Each player has 5 ducks. The ducks and the empty water cards are shuffled together to create the deck of ducks. The top 6 cards of this deck are drawn and layed out side by side to create the pond (a game board with 6 spaces). The leftmost (or topmost, for simplification when printing the board) duck is in the first position. Above each space in the pond is a space for the crosshairs (a second game board with 6 spaces).
@@ -160,26 +162,26 @@ The last player standing wins.
 
 ## Action cards
 ### Aim and Shoot
-#### Aim
+#### Aim - 10 cards
 When played we target one space of the pond. We can only target a place that is not yet targeted. We do not target a specific duck but only the space of the pond it is sitting in. If the duck moves the targeted space remains in the same place and will target a new duck or water. A space that contains water may be targeted.
 
-#### Shoot
+#### Shoot - 12 cards
 When played we shoot at a targeted space. It does not matter which player targeted the space. Any duck that is currently sitting in a targeted space can be shot by any player. The shot duck is removed from the game. All the cards that are placed in the spaces to the right (down) of the duck move by one space to fill the gap. The last space in the pond is filled by the top card of the duck deck. The crosshair is removed from the space (it is no longer targeted). Shoot can be played on a targeted water space. The water is not removed in this case, only the crosshair is removed (the space is no longer targeted).
 
-#### Wild Bill
+#### Wild Bill - 2 cards
 Is a combination of the Aim and Shoot cards. Remove any duck from the pond. If the space it was sitting on was targeted, remove the crosshair. The ducks will move to fill the empty space in the pond, just like when the Shoot card is played.
 
 ### Duck movement
-#### Duck march
+#### Duck march - 6 cards
 All the ducks move one space forward. The duck in the first space is moved to the bottom of the duck deck, the empty space at the end is filled with the duck from the top of the duck deck.
 
-#### Turboduck
+#### Turboduck - 1 card
 Move any duck to the first space in the pond. The ducks that were overtaken by it move one space backwards, to fill the gap.
 
-#### Scatter
+#### Scatter - 2 cards
 Randomly rearange the positions of all the cards in the pond. The targeted spaces do not change (perform a shuffle of the cards in the pond).
 
-#### Duck dance
+#### Duck dance - 1 card
 Put the cards from the pond back into the duck deck, shuffle the deck and place 6 new cards into the pond.
 
 ## Evaluation
@@ -222,8 +224,12 @@ Clone the assignment from the repository created from this template by the provi
 
 Make sure, that your repository was created under the **Interes-Group** group, otherwise we won't be able to access your repository, and the assignment will not be graded.
 
-You can push commits to the repository while you work - you don't have to push everything at once. Only the code in the _master_ branch will be graded. You have until **24.3.2022 23:00** to complete the assignment.
+You can push commits to the repository while you work - you don't have to push everything at once. Only the code in the _master_ branch will be graded. You have until **25.3.2022 23:00** to complete the assignment.
 
 Only edit files in the _src/main_ folder or its sub-folders. You mustn't change any other files in the repository (especially the _pom.xml_ file, and the github pipeline files).
 
 You have to have your name set in your github account (settings > profile > name), so that we can match students with their assignments. **If we are unable to match a student with their assignment, the student will receive 0 points for the assignment!**
+
+## Resources (for better understanding of assignment, but only in CZ)
+* [Rules of the original game](https://hrajeme.cz/wp-content/uploads/Files/Strelenekachny.pdf)
+* [Short video about original game](https://www.youtube.com/watch?v=6pQn0A1S6Eg)
