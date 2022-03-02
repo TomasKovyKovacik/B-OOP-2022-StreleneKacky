@@ -106,7 +106,7 @@ Prípadne sú pri nedostatočnej implementácií struhnuté body za OOP za nedos
 
 ## Odovzdávanie
 Zadanie si naklonujte z repozitára zadania výhradne pomocou poskytnutej linky cez GitHub Classroom (pokiaľ si vygenerujete vlastný repozitár pomocou tlačidla "Use this template" z template repozitára, my váš repozitár neuvidíme a nebudeme ho hodnotiť!). Svoje vypracovanie nahrajte do pre vás vytvoreného repozitára pre toto zadanie pomocou programu Git (git commit + git push).
-Skontrolujte si, či sa váš repozitár nachádza pod skupinov **Interes-Group**, inak nemáme prístup ku vášmu repozitáru a zadanie sa nepovažuje za odovzdané. Vypracovanie môžete "pusho-vať" priebežne. Hodnotiť sa bude iba _master_ branch. Zadanie je nutné vypracovať do **24.3.2021 23:00**.
+Skontrolujte si, či sa váš repozitár nachádza pod skupinov **Interes-Group**, inak nemáme prístup ku vášmu repozitáru a zadanie sa nepovažuje za odovzdané. Vypracovanie môžete "pusho-vať" priebežne. Hodnotiť sa bude iba _master_ branch. Zadanie je nutné vypracovať do **24.3.2022 23:00**.
 
 V projekte upravujte iba súbory v priečinku _src/main_ a jeho podpriečinkoch. Ostatné súbory je upravovať zakázané (predovšetkým súbory _pom.xml_, súbory obsahujúce github pipeline-y a súbory obsahujúce automatizované testy).
 
@@ -114,7 +114,7 @@ Vo svojom github účte si nastavte svoje meno alebo AIS login (settings > profi
 
 
 
-# Assignment 1
+# Assignment 1 - Duck hunt
 B-OOP 2022
 
 Your task is to create a simplified version of the card game "Duck hunt" in the form of a console JAVA aplication.
@@ -123,7 +123,7 @@ Your task is to create a simplified version of the card game "Duck hunt" in the 
 Ducks are swimming peacefully in a pond. They have no idea that there are hunters nearby, and the hunters won't stop shooting until all the ducks are dead. Each of the hunters must protect some of the ducks and their goald is to shoot all the ducks of the other hunters.
 
 ## Goal of the game
-Protect your own ducks and try to kill the ducks of the other players. The player who has the only surviving ducks wins (for simplification, each player has 5 lives at the start of the game and they will losse a life whenever one of their ducks dies).
+Protect your own ducks and try to kill the ducks of the other players. The player who has the only surviving ducks wins (for simplification, each player has 5 lives at the start of the game and they will lose a life whenever one of their ducks dies).
 
 ## Cards
 * 5 Ducks for each player
