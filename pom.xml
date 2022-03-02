@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>sk.stuba.fei.uim.oop</groupId>
-    <artifactId>B-OOP-2022-zadanie-1</artifactId>
+    <artifactId>B-OOP-2022-assignment-1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -27,6 +27,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.4.3</version>
                 <executions>
                     <execution>
                         <goals>

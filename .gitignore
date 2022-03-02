@@ -1,4 +1,9 @@
-.github/
+# Idea
 .idea/
-FEI-UIM-OOP-LS-21-zadanie-0.iml
 target
+B-OOP-2022-assignment-1.iml
+
+# VS code
+.settings/
+.classpath
+.project
