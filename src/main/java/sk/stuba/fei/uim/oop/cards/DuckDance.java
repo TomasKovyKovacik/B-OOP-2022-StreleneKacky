@@ -4,10 +4,10 @@ import sk.stuba.fei.uim.oop.board.Board;
 import sk.stuba.fei.uim.oop.player.Player;
 
 public class DuckDance extends Card {
+    private static final String CARD_NAME = "Duck dance!";
 
     public DuckDance(Board board) {
-        this.name = "Duck dance!";
-        this.board = board;
+        super(CARD_NAME, board);
     }
 
     @Override

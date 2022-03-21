@@ -5,10 +5,10 @@ import sk.stuba.fei.uim.oop.player.Player;
 import sk.stuba.fei.uim.oop.tiles.Duck;
 
 public class TurboDuck extends Card {
+    private static final String CARD_NAME = "Turbo Duck";
 
     public TurboDuck(Board board) {
-        this.name = "Turbo Duck";
-        this.board = board;
+        super(CARD_NAME, board);
     }
 
     @Override

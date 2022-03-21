@@ -2,8 +2,6 @@ package sk.stuba.fei.uim.oop.tiles;
 
 import sk.stuba.fei.uim.oop.player.Player;
 
-import java.util.Arrays;
-
 public class Duck extends Tile{
     private final Player player;
 

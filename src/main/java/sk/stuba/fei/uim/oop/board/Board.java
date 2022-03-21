@@ -60,9 +60,9 @@ public class Board {
 
         Collections.shuffle(this.actionCards);
         for (Player player : players) {
-            Card[] newCards = new Card[3];
+            ArrayList<Card> newCards = new ArrayList<>();
             for (int i = 0; i < 3; i++) {
-                newCards[i] = actionCards.remove(0);
+                newCards.add(actionCards.remove(0));
             }
             player.setCards(newCards);
         }

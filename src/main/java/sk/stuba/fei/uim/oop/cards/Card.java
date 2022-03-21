@@ -8,6 +8,11 @@ public abstract class Card {
     protected String name;
     protected Board board;
 
+    public Card(String name, Board board) {
+        this.name = name;
+        this.board = board;
+    }
+
     public abstract boolean canPlay();
 
     public abstract boolean canPlay(int index);

@@ -5,10 +5,10 @@ import sk.stuba.fei.uim.oop.player.Player;
 import sk.stuba.fei.uim.oop.tiles.Duck;
 
 public class Shooting extends Card {
+    private static final String CARD_NAME = "Shooting!";
 
     public Shooting(Board board) {
-        this.name = "Shooting!";
-        this.board = board;
+        super(CARD_NAME, board);
     }
 
     @Override

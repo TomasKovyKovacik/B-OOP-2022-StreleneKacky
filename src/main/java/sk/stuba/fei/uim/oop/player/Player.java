@@ -3,17 +3,16 @@ package sk.stuba.fei.uim.oop.player;
 import sk.stuba.fei.uim.oop.cards.Card;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Player {
 
     private final String name;
     private int lives;
-    private Card[] cards;
+    private ArrayList<Card> cards;
 
     public Player(String name) {
-        this.cards = new Card[3];
+        this.cards = new ArrayList<Card>();
         this.name = name;
         this.lives = 5;
     }
@@ -26,8 +25,14 @@ public class Player {
         return lives;
     }
 
-    public void setCards(Card[] cards) {
+    public void setCards(ArrayList<Card> cards) {
         this.cards = cards;
+    }
+
+    public ArrayList<Card> removeCardsFromHand() {
+        ArrayList<Card> removedCards = new ArrayList<>(this.cards);
+        this.cards.clear();
+        return removedCards;
     }
 
     public ArrayList<Card> getPlayableCards() {
@@ -41,7 +46,7 @@ public class Player {
     }
 
     public ArrayList<Card> getAllCards() {
-        return new ArrayList<>(Arrays.asList(this.cards));
+        return this.cards;
     }
 
     public boolean isActive() {
@@ -53,9 +58,11 @@ public class Player {
     }
 
     public void removeAndTakeNewCard(Card oldCard, Card newCard) {
-        for (int i = 0; i < this.cards.length; i++) {
-            if (Objects.equals(this.cards[i], oldCard)) {
-                this.cards[i] = newCard;
+        for (int i = 0; i < this.cards.size(); i++) {
+            if (Objects.equals(this.cards.get(i), oldCard)) {
+                this.cards.remove(i);
+                this.cards.add(i, newCard);
+                break;
             }
         }
     }

@@ -35,6 +35,10 @@ public class Ducks {
         while (this.getNumberOfActivePlayers() > 1) {
             Player activePlayer = this.players[this.currentPlayer];
             if (!activePlayer.isActive()) {
+                ArrayList<Card> cardsToDeck = activePlayer.removeCardsFromHand();
+                for (Card card : cardsToDeck) {
+                    this.board.addActionCard(card);
+                }
                 this.incrementCounter();
                 continue;
             }

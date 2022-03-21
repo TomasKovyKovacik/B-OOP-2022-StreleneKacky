@@ -4,10 +4,10 @@ import sk.stuba.fei.uim.oop.board.Board;
 import sk.stuba.fei.uim.oop.player.Player;
 
 public class WaterWhirlpool extends Card {
+    private static final String CARD_NAME = "Water Whirlpool!";
 
     public WaterWhirlpool(Board board) {
-        this.name = "Water Whirlpool!";
-        this.board = board;
+        super(CARD_NAME, board);
     }
 
     @Override
