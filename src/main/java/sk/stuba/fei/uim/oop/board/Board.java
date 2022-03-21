@@ -78,17 +78,16 @@ public class Board {
     }
 
     public boolean canAim() {
-        for (boolean aim : this.aimTiles) {
-            if (!aim) {
-                return true;
-            }
-        }
-        return false;
+        return this.aimContains(false);
     }
 
     public boolean isAimed() {
+        return this.aimContains(true);
+    }
+
+    private boolean aimContains(boolean query) {
         for (boolean aim : this.aimTiles) {
-            if (aim) {
+            if (aim == query) {
                 return true;
             }
         }
